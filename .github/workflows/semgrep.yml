@@ -11,6 +11,6 @@ jobs:
       image: semgrep/semgrep
 
 
-    step:
+    steps:
       - uses: actions/checkout@v3
       - run: semgrep scan --config auto
