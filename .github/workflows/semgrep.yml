@@ -1,0 +1,16 @@
+name: Semgrep
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  semgrep:
+    runs-on: ubuntu-latest
+    container:
+      image: semgrep/semgrep
+
+
+    step:
+      - uses: actions/checkout@v3
+      - run: semgrep scan --config auto
